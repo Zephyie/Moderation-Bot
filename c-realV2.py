@@ -2328,7 +2328,8 @@ try:
     if is_selfbot:
         print('Selfbot is no longer supported')
         exit()
-    client.run(settings['token'])
+        import os
+    client.run(os.environ.get("DISCORD_TOKEN"))
 except discord.PrivilegedIntentsRequired:
     os.system('cls' if os.name == 'nt' else 'clear')
     print('PrivilegedIntentsRequired: Watch https://youtu.be/DXnEFoHwL1A?t=44 to see how to turn on the required field.')

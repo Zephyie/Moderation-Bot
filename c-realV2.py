@@ -71,12 +71,7 @@ fetching_members = False
 bad_filename_map = dict((ord(char), None) for char in '<>:"\\/|?*')
 grant_all_permissions = False
 # normal functions==============
-def exit():
-    try:
-        # input('Press enter to exit...')
-    except (EOFError, KeyboardInterrupt):
-        pass
-    sys.exit(1)
+def exit()
 
 def banner():
     """Handler for non-unicode consoles"""

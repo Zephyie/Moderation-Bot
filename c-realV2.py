@@ -73,7 +73,7 @@ grant_all_permissions = False
 # normal functions==============
 def exit():
     try:
-        input('Press enter to exit...')
+        # input('Press enter to exit...')
     except (EOFError, KeyboardInterrupt):
         pass
     sys.exit(1)
@@ -2331,8 +2331,8 @@ try:
     if is_selfbot:
         print('Selfbot is no longer supported')
         exit()
-        import os
-    client.run(os.environ.get("DISCORD_TOKEN"))
+import os
+client.run(os.environ.get("DISCORD_TOKEN"))
 except discord.PrivilegedIntentsRequired:
     os.system('cls' if os.name == 'nt' else 'clear')
     print('PrivilegedIntentsRequired: Watch https://youtu.be/DXnEFoHwL1A?t=44 to see how to turn on the required field.')
@@ -2341,3 +2341,6 @@ except Exception as e:
     print(e)
 finally:
     sys.stdout.write('Exiting...               \n')
+if __name__ == "__main__"
+import os
+token = os.environ.get("DISCORD_TOKEN")

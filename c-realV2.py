@@ -1,3 +1,4 @@
+import os 
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 """
@@ -94,8 +95,10 @@ if version.parse('1.5.1') > version.parse(discord.__version__):
     exit()
 
 settings = {
-        "token": None,
-        "permissions": [],
+        "token": 
+os.environ.get("DISCORD_TOKEN"),
+    "permissions":
+    [os.environ.get("USER_ID")],
         "bot_permission": "2146958847",
         "command_prefix": ".",
         "bot_status": "offline",
